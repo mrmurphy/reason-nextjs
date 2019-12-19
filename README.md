@@ -16,7 +16,7 @@ State:
 1. Install:
 
 ```
-npm install --save next@9 bs-next
+npm install --save next@9 nextdotbs
 ```
 
 (Notice how you installed both next and bs-next!)
