@@ -26,6 +26,17 @@ module Head = {
 
 module Link = {
   [@react.component] [@bs.module "next/link"]
-  external make: (~children: React.element, ~href: string) => React.element =
+  external make:
+    (
+      ~children: React.element,
+      ~href: string,
+      ~_as: string=?,
+      ~replace: bool=?,
+      ~scroll: bool=?,
+      ~shallow: bool=?,
+      ~passHref: bool=?,
+      ~prefetch: bool=?
+    ) =>
+    React.element =
     "default";
 };
