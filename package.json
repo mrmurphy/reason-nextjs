@@ -6,7 +6,7 @@
     "build": "bsb -make-world",
     "start": "bsb -make-world -w"
   },
-  "repository": "https://github.com/mrmurphy/bs-next",
+  "repository": "https://github.com/mrmurphy/nextdotbs",
   "keywords": [
     "BuckleScript",
     "Reason",
@@ -22,6 +22,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "bs-platform": "^7.0.1"
+    "bs-platform": "^7.0.1",
+    "reason-react": "^0.7.0"
   }
 }

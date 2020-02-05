@@ -19,9 +19,9 @@ State:
 npm install --save next@9 nextdotbs
 ```
 
-(Notice how you installed both next and bs-next!)
+(Notice how you installed both next and nextdotbs!)
 
-2. Add "bs-next" to your "bs-dependencies" in your "bsconfig.json"
+2. Add "nextdotbs" to your "bs-dependencies" in your "bsconfig.json"
 
 3. [Install ReasonReact](https://reasonml.github.io/reason-react/docs/en/installation)
 
