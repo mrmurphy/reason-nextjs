@@ -40,19 +40,32 @@ if (!fs.existsSync(linkPath)) {
   mkdirp.sync(splitted.slice(0, splitted.length - 1).join("/"));
 }
 
-let finalSrcPath = srcPath + ".re";
+let finalSrcPath = srcPath + ".bs.js";
 let finalLinkPath = linkPath + ".js";
 
-if (!fs.existsSync(finalSrcPath)) {
+if (!fs.existsSync(srcPath + ".re")) {
   // Write the BS file in place
-  fs.writeFileSync(finalSrcPath, "// Add your page code here!\n");
+  fs.writeFileSync(
+    srcPath + ".re",
+    `
+open React;
+open Next;
+
+[@react.component]
+let default = () => {
+  <div>"Hello"->string</div>;
+};
+`
+  );
 }
 
 if (!fs.existsSync(finalLinkPath)) {
-  // Link the JS file into place
-  fs.symlinkSync(
-    path.relative(path.dirname(finalLinkPath), finalSrcPath),
-    finalLinkPath
+  fs.writeFileSync(
+    finalLinkPath,
+    `
+import Page from "${path.relative(path.dirname(finalLinkPath), finalSrcPath)}";
+export default Page;
+`
   );
 }
 
