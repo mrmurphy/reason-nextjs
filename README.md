@@ -4,10 +4,9 @@ Type definitions for Next.js.
 
 State:
 
-- Incomplete type definitions. Feel free to open a pull-request to add more!
-- Though incomplete, these typedefs are being used in production, so what's there does work.
+- Mostly complete type definitions. Feel free to open a pull-request to add more!
 - Wraps API for Next version 9.x.x on NPM
-- Only works with Bucklescript 6.x and above.
+- Only works with Bucklescript 7.x and above.
 
 # The Basics.
 
@@ -16,12 +15,12 @@ State:
 1. Install:
 
 ```
-npm install --save next@9 nextdotbs
+npm install --save next@9 reason-nextjs
 ```
 
 (Notice how you installed both next and nextdotbs!)
 
-2. Add "nextdotbs" to your "bs-dependencies" in your "bsconfig.json"
+2. Add "reason-nextjs" to your "bs-dependencies" in your "bsconfig.json"
 
 3. [Install ReasonReact](https://reasonml.github.io/reason-react/docs/en/installation)
 
