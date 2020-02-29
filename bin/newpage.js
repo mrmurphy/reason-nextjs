@@ -61,12 +61,17 @@ let default = () => {
   );
 }
 
+let moduleName = path.basename(finalSrcPath, ".bs.js");
+
 if (!fs.existsSync(finalLinkPath)) {
   fs.writeFileSync(
     finalLinkPath,
     `
-import Page from "${path.relative(path.dirname(finalLinkPath), finalSrcPath)}";
-export default Page;
+import ${moduleName} from "${path.relative(
+      path.dirname(finalLinkPath),
+      finalSrcPath
+    )}";
+export default ${moduleName};
 `
   );
 }
