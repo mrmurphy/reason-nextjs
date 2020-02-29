@@ -7,7 +7,7 @@
     "start": "bsb -make-world -w"
   },
   "bin": {
-    "new_page": "./bin/new_page.js"
+    "newpage": "./bin/newpage.js"
   },
   "repository": "https://github.com/mrmurphy/reason-nextjs",
   "keywords": [
