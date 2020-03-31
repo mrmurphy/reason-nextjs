@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "mkdirp": "^1.0.3",
-    "next": "^9.1.6"
+    "next": "^9.3.2"
   },
   "devDependencies": {
     "bs-platform": "^7.0.1",
